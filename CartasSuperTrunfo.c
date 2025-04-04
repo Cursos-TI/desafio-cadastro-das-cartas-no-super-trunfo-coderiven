@@ -11,6 +11,8 @@ int main()
     int codigo2, hab2, turis2;
     float area2, pib2;
 
+    double densidade, pibper, densidade2, pibper2;
+
     // primeira carta a baixo
 
     printf(" seja bem vindo ao super trunfo \n\n");
@@ -42,7 +44,7 @@ int main()
     printf("\n segunda carta\n\n");
 
     printf("digite uma segunda letra de A a H: \n");
-    scanf("%s", &letra2); //esse scanf ta em S(string) pois tava dando erro de codagem
+    scanf("%s", &letra2); // esse scanf ta em S(string) pois tava dando erro de codagem
 
     printf("digite um numero de 0 a 4: \n");
     scanf("%d", &codigo2);
@@ -65,6 +67,12 @@ int main()
     // resultado a baixo
     // primeira carta
 
+    densidade = hab / area;
+    pibper = pib / hab;
+
+    densidade2 = hab2 / area2;
+    pibper2 = pib2 / hab2;
+
     printf("\n\ncarta 1\n\n");
     printf("estado: %c\n", letra);
     printf("codigo: %c0%d \n", letra, codigo);
@@ -72,8 +80,9 @@ int main()
     printf("populaçao: %d \n", hab);
     printf("área: %.2f km²\n", area);
     printf("PIB: %.2f bilhoes de reais\n", pib);
-    printf("numero de pontos turisticos: %d \n\n", turis);
-
+    printf("numero de pontos turisticos: %d \n", turis);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade);
+    printf("PIB per Capita: %.2f reais \n\n", pibper);
     // segunda carta
 
     printf("carta 2\n\n");
@@ -84,6 +93,8 @@ int main()
     printf("área: %.2f km² \n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("numero de pontos turisticos: %d \n", turis2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais \n\n", pibper2);
 
     return 0;
 }
